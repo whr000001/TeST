@@ -1,6 +1,6 @@
 # Test: Temporal-Spatial Separated Transformer for Temporal Action Localization
 
-This is an official implementation in PyTorch of TeST. Our paper is available at [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4837237](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4837237).
+This is an official implementation in PyTorch of TeST.
 
 <p align="center">
 <img src="https://github.com/whr000001/TeST/blob/main/imgs/overview.png"   width="600" />
