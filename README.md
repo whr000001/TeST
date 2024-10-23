@@ -16,6 +16,19 @@ This is an official implementation in PyTorch of TeST.
 ## Getting Start
 TBD
 
+## Citation
+If you find our work interesting/helpful, please consider citing TeST:
+```
+@article{wan2024test,
+  title={TeST: Temporal-spatial separated transformer for temporal action localization},
+  author={Wan, Herun and Luo, Minnan and Li, Zhihui and Wang, Yang},
+  journal={Neurocomputing},
+  pages={128688},
+  year={2024},
+  publisher={Elsevier}
+}
+```
+
 
 ## Updating
 - 20241006: We uploaded the initial codes without details. We plan to upload the complete codes and details by November.
