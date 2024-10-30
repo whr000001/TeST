@@ -37,7 +37,7 @@ You could follow [AFSD](https://github.com/TencentYoutuResearch/ActionDetection-
 - THUMOS14 Data
 1. Download the RGB and flow npy files
 2. Create a 'data' fold
-3. TBD
+3. Put npy files into corresponding files
 
 - Backbone Parameters
 1. Download the RGB and flow backbone parameters
@@ -56,7 +56,12 @@ Make sure the file structure is correct.
 │   └── rgb_imagenet.pt  # parameters for rgb backbone
 ├── configs  # the training configs
 │   ├── thumos_flow.yaml  # config for flow model
-│   └── thumos_rgb.yaml  # config for rgb model 
+│   └── thumos_rgb.yaml  # config for rgb model
+├── data  # THUMOS dataset
+│   ├── test_flow_npy
+│   ├── test_npy
+│   ├── validation_flow_npy
+│   └── validation_npy
 ├── dataset  # dataset files
 │   ├── __init__.py
 │   ├── dataset.py
@@ -80,11 +85,31 @@ Make sure the file structure is correct.
 ```
 
 ## Training TeST
-TBD
+Train rgb model using:
+```
+python train.py --config_file configs/thumos_rgb.yaml
+```
+or train flow model using:
+```
+python train.py --config_file configs/thumos_flow.yaml
+```
+You could change the hyper-parameters in corresponding yaml files.
+
 ## Testing TeST
-TBD
+You can test TeST using a single feature map by:
+```
+python test_single.py --config_file configs/thumos_rgb.yaml
+python test_single.py --config_file configs/thumos_flow.yaml 
+```
+or test using multiple feature maps:
+```
+python test_ensemble.py --config_file configs/thumos_rgb.yaml 
+```
 ## Evaluating TeST
-TBD
+You can evaluate the output by running:
+```
+python evaluate.py --output_json output/detection_results_ensemble.json
+```
 
 ## Citation
 If you find our work interesting/helpful, please consider citing TeST:
