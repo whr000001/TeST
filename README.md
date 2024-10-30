@@ -1,6 +1,6 @@
 # Test: Temporal-Spatial Separated Transformer for Temporal Action Localization
 
-This is an official implementation in PyTorch of TeST.
+This is an official implementation in PyTorch of [TeST](https://www.sciencedirect.com/science/article/abs/pii/S0925231224014590).
 
 <p align="center">
 <img src="https://github.com/whr000001/TeST/blob/main/imgs/overview.png"   width="600" />
@@ -13,7 +13,45 @@ This is an official implementation in PyTorch of TeST.
 - Extensive experiments on two real-world benchmarks validate the effectiveness and superiority of our proposed TEST.
 
 
-## Getting Start
+## Preparation
+This repository is based on [AFSD](https://github.com/TencentYoutuResearch/ActionDetection-AFSD), using a similar code structure and environment.
+
+### Environment
+- NVIDIA GPU supporting CUDA 9.2
+- CUDA 9.2
+- Python 3.7
+- Pytorch == 1.4.0 (Please make sure that the pytorch version is 1.4.0 due to the module from AFSD)
+
+### Setup
+```
+conda install pytorch==1.4.0 cudatoolkit=9.2 -c pytorch
+cd AFSD
+python setup.py develop
+pip install einops 
+pip install pyyaml
+pip install pandas
+```
+
+### Data Preparation
+You could follow [AFSD](https://github.com/TencentYoutuResearch/ActionDetection-AFSD) to download the needed data.
+- THUMOS14 Data
+1. Download the RGB and flow npy files
+2. Create a 'data' fold
+3. TBD
+
+- Backbone Parameters
+1. Download the RGB and flow backbone parameters
+2. Create a 'backbone' fold
+3. Put 'rgb_imagenet.pt' and 'flow_imagenet.pt' in the 'backbone'
+
+### File Structure
+TBD
+
+## Training TeST
+TBD
+## Testing TeST
+TBD
+## Evaluating TeST
 TBD
 
 ## Citation
@@ -31,4 +69,5 @@ If you find our work interesting/helpful, please consider citing TeST:
 
 
 ## Updating
+- 20241030: We uploaded the complete codes for the THUMOS14 dataset and completed the readme.
 - 20241006: We uploaded the initial codes without details. We plan to upload the complete codes and details by November.
