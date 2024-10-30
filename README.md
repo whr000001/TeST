@@ -45,7 +45,39 @@ You could follow [AFSD](https://github.com/TencentYoutuResearch/ActionDetection-
 3. Put 'rgb_imagenet.pt' and 'flow_imagenet.pt' in the 'backbone'
 
 ### File Structure
-TBD
+Make sure the file structure is correct.
+```python
+├── AFSD  # the AFSD module to obtain boundary features
+│   ├── boundary_max_pooling_cuda.cpp
+│   ├── boundary_max_pooling_kernel.cu
+│   └── setup.py  # install the AFSD module
+├── backbones  # the backbone parameters
+│   ├── flow_imagenet.pt  # parameters for flow backbone
+│   └── rgb_imagenet.pt  # parameters for rgb backbone
+├── configs  # the training configs
+│   ├── thumos_flow.yaml  # config for flow model
+│   └── thumos_rgb.yaml  # config for rgb model 
+├── dataset  # dataset files
+│   ├── __init__.py
+│   ├── dataset.py
+│   └── video_transforms.py
+├── imgs  # iamges for README
+│   └── overview.png
+├── model  # the main model files
+│   ├── __init__.py
+│   ├── boundary_pooling_op.py
+│   ├── i3d_backbone.py
+│   ├── layers.py
+│   └── main.py
+├── config.py  # process config
+├── evaluate.py  # evaluate TeST
+├── LICENSE
+├── losses.py  # the loss function
+├── README.md
+├── test_ensemble.py  # test TeST using single feature map
+├── test_single.py  # test TeST using multiple feature map
+└── train.py  # train TeST
+```
 
 ## Training TeST
 TBD
