@@ -124,6 +124,8 @@ If you find our work interesting/helpful, please consider citing TeST:
 }
 ```
 
+## Questions?
+Feel free to open issues in this repository! Instead of emails, GitHub issues are much better at facilitating a conversation between you and our team to address your needs. You can also contact Herun Wan through wanherun@stu.xjtu.edu.cn.
 
 ## Updating
 - 20241030: We uploaded the complete codes for the THUMOS14 dataset and completed the readme.
